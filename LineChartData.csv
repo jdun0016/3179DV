@@ -1,0 +1,46 @@
+Country,TotalLibrarySize,NoofTVShows,NoofMovies,SubscriptionCost,SubscriptionType
+Czechia,7325,5234,2091,8.83,CostPerMonthBasic
+Slovakia,7035,5055,1980,9.03,CostPerMonthBasic
+Hungary,6884,4802,2082,7.64,CostPerMonthBasic
+Bulgaria,6797,4819,1978,9.03,CostPerMonthBasic
+United Kingdom,6643,4551,2092,7.91,CostPerMonthBasic
+Ireland,6486,4515,1971,9.03,CostPerMonthBasic
+Lithuania,6462,4490,1972,9.03,CostPerMonthBasic
+Estonia,6456,4486,1970,9.03,CostPerMonthBasic
+Latvia,6450,4479,1971,9.03,CostPerMonthBasic
+Iceland,6387,4426,1961,9.03,CostPerMonthBasic
+Philippines,6362,4154,2208,7.35,CostPerMonthBasic
+Singapore,6303,4109,2194,9.51,CostPerMonthBasic
+Canada,6239,4311,1928,7.91,CostPerMonthBasic
+Gibraltar,6167,4079,2088,9.03,CostPerMonthBasic
+Australia,6114,4050,2064,7.84,CostPerMonthBasic
+Czechia,7325,5234,2091,11.49,CostPerMonthStandard
+Slovakia,7035,5055,1980,11.29,CostPerMonthStandard
+Hungary,6884,4802,2082,10.71,CostPerMonthStandard
+Bulgaria,6797,4819,1978,11.29,CostPerMonthStandard
+United Kingdom,6643,4551,2092,13.2,CostPerMonthStandard
+Ireland,6486,4515,1971,14.67,CostPerMonthStandard
+Lithuania,6462,4490,1972,11.29,CostPerMonthStandard
+Estonia,6456,4486,1970,11.29,CostPerMonthStandard
+Latvia,6450,4479,1971,11.29,CostPerMonthStandard
+Iceland,6387,4426,1961,14.67,CostPerMonthStandard
+Philippines,6362,4154,2208,9.14,CostPerMonthStandard
+Singapore,6303,4109,2194,12.81,CostPerMonthStandard
+Canada,6239,4311,1928,11.87,CostPerMonthStandard
+Gibraltar,6167,4079,2088,14.67,CostPerMonthStandard
+Australia,6114,4050,2064,12.12,CostPerMonthStandard
+Czechia,7325,5234,2091,14.15,CostPerMonthPremium
+Slovakia,7035,5055,1980,13.54,CostPerMonthPremium
+Hungary,6884,4802,2082,13.78,CostPerMonthPremium
+Bulgaria,6797,4819,1978,13.54,CostPerMonthPremium
+United Kingdom,6643,4551,2092,18.48,CostPerMonthPremium
+Ireland,6486,4515,1971,20.32,CostPerMonthPremium
+Lithuania,6462,4490,1972,13.54,CostPerMonthPremium
+Estonia,6456,4486,1970,13.54,CostPerMonthPremium
+Latvia,6450,4479,1971,13.54,CostPerMonthPremium
+Iceland,6387,4426,1961,20.32,CostPerMonthPremium
+Philippines,6362,4154,2208,10.93,CostPerMonthPremium
+Singapore,6303,4109,2194,16.11,CostPerMonthPremium
+Canada,6239,4311,1928,15.03,CostPerMonthPremium
+Gibraltar,6167,4079,2088,20.32,CostPerMonthPremium
+Australia,6114,4050,2064,16.39,CostPerMonthPremium
