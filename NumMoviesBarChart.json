@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {"text": "Top 15 Countries with Biggest Library Sizes"},
+    "width": 360,
+    "height": 250,
+    "data": {
+        "values": [
+          {"Country": "Czechia", "TotalLibrarySize": 7.325},
+          {"Country": "Slovakia", "TotalLibrarySize": 7.035},
+          {"Country": "Hungary", "TotalLibrarySize": 6.884},
+          {"Country": "Bulgaria", "TotalLibrarySize": 6.797},
+          {"Country": "United Kingdom", "TotalLibrarySize": 6.643},
+          {"Country": "Ireland", "TotalLibrarySize": 6.486},
+          {"Country": "Lithuania", "TotalLibrarySize": 6.462},
+          {"Country": "Estonia", "TotalLibrarySize": 6.456},
+          {"Country": "Latvia", "TotalLibrarySize": 6.450},
+          {"Country": "Iceland", "TotalLibrarySize": 6.387},
+          {"Country": "Philippines", "TotalLibrarySize": 6.362},
+          {"Country": "Singapore", "TotalLibrarySize": 6.303},
+          {"Country": "Canada", "TotalLibrarySize": 6.239},
+          {"Country": "Gibraltar", "TotalLibrarySize": 6.167},
+          {"Country": "Australia", "TotalLibrarySize": 6.114}
+        ]
+      },
+    "encoding": {
+      "y": {"field": "Country", "type": "nominal", "sort": "-x", "title": null},
+      "x": {"field": "TotalLibrarySize", "type": "quantitative", "title": null}
+    },
+    "layer": [
+      {
+        "mark": "bar",
+        "encoding": {
+          "color": {
+            "field": "TotalLibrarySize",
+            "type": "quantitative",
+            "title": "In Thousand"
+          }
+        }
+      },
+      {
+        "mark": {"type": "text", "align": "right", "xOffset": -4, "aria": false},
+        "encoding": {
+          "text": {"field": "TotalLibrarySize", "type": "quantitative"},
+          "color": {
+            "condition": {"test": {"field": "TotalLibrarySize", "gt": 6.7}, "value": "white"},
+            "value": "black"
+          }
+        }
+      }
+    ]
+  }

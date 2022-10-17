@@ -1,7 +1,22 @@
+/* Font */
 h1{
     font-family: 'Roboto';
 }
 
 p{
     font-family: 'Roboto';
+}
+
+/* Text Alignment */
+
+#l-align {
+    text-align: left;
+}
+
+#c-align {
+    text-align: center;
+}
+
+#r-align {
+    text-align: right;
 }
