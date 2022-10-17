@@ -1,29 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-<script src="vega_lite_vis.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>Data Visualisation 2</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="vega_lite_vis.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<title>Data Visualisation 2 </title>
+
+
 </head>
+
 <body>
-<h1>Which Country has the Best Netflix Deal?</h1>
-<p> Netflix is one of the biggest streaming services around the world and is enjoyed in many countries. However, depending on where you
-    live in the world, different countries may have different subscription prices and different TV and movie options. Lets find out where 
-    around the world the best Netflix deal can be found.
-</p>
-<div id="netflix_cost_map">
-</div>
-<p> This map displays the standard netflix monthly subscription cost around the
-    world in USD.
-</p>
-</body>
-</html>
+
+  <div class="page">
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1 style="padding-right: 150px; padding-left: 150px; background-color:#b8cae1; height: 40px;" id = "c-align"><b>Which Country has the best Netflix deal?</b></h1>
+        <br>
+        <p style="padding-right: 150px; padding-left: 150px;">
+
+            Netflix is one of the biggest streaming services around the world and is enjoyed in many countries. However, depending on where you
+            live in the world, different countries may have different subscription prices and different TV and movie options. Lets find out where 
+            around the world the best Netflix deal can be found.
+        
+        </p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+    <br><br>
+    <div id = "c-align">
+        <h2 style="padding-right: 150px; padding-left: 150px; text-align:center; font-size: 25px; background-color:#b8cae1; height: 30px;">
+            
+            Netflix Standard Monthly Costs
+        
+        </h2>
+    <div id= "netflix_cost_map"></div>
+    <p style="padding-right: 150px; padding-left: 150px;">This map displays the standard netflix monthly subscription cost around the
+        world in USD. The cost of a standard subscription is most expensive around Europe. It is cheapest in <b>India</b>, <b>Turkey</b> and many places
+        around South America including <b>Brazil</b>, <b>Argentina</b> and <b>Colombia</b>.</p>
+    </div>
+
+    
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+            <br><br><br>
+          <h2 style="padding-right: 150px; padding-left: 150px; text-align:center; font-size: 25px; background-color:#b8cae1; height: 30px;">
+            
+            Netflix Biggest Libraries
+        
+        </h2>
+        <p style="padding-right: 150px; padding-left: 150px;"> A Netflix Library is made up of TV shows and Movies available on Netflix at a
+             certain time in a particular country. <b>Czechia</b> has the biggest library with <b>7,325</b> available programs to view. <b>Slovakia</b> is the
+            only other country to have over 7000 items in their library with <b>7,035</b>. <b>Australia</b> rounds out the top 15 countries, having
+            <b>6,114</b> movies and TV shows. However, not all of these programs in each country are available with standard subscriptions.
+            To access all the programs, a premium Netflix subscription is required. Lets see how much it would cost to acquire a premium
+            subscription, and how this compares to other countries. </p>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <br><br><br><br><br>
+        <div id="movie_bar_chart" style="padding-right: 100px; padding-left: 100px;"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+    <br><br><br>
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <br><br><br><br>
+          <div id="bubble_chart" style="padding-right: 150px; padding-left: 150px;"></div>
+          <P style="padding-right: 150px; padding-left: 150px;"> *hover over circle to see country</P>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <h2 style="padding-right: 150px; padding-left: 150px; text-align:center; font-size: 25px; background-color:#b8cae1; height: 30px;">
+            Premium Subscription Value</h2>
+        <p style="padding-right: 150px; padding-left: 150px;">A premium monthly subscription to Netflix can be quite expensive in some
+        countries as it can cost over $25 USD. Good value for money can be found in <b>Turkey</b> who match up reasonably well with other 
+    countries in terms of range of program options and have a very good price of <b>$4.02</b>. <b>India</b> has even greater range at quite a low price
+    of <b>$8.60</b>, but this is still double the cost of Turkey's premium fee. <b>San Marino</b>, <b>Croatia</b> and <b>Liechtenstein</b> have the worst premium deals
+    as they have much smaller libraries than the other countries and still charge a costly monthly price of <b>$20.32</b>, <b>$13.54</b> and <b>$26.96</b> 
+    respectively.</p>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+<!-- pure grid group -->
+<div class="pure-g">
+    <div class="pure-u-1-2">
+      <div class="description description-left">
+          <br><br><br>
+        <h2 style="padding-right: 150px; padding-left: 150px; text-align:center; font-size: 25px; background-color:#b8cae1; height: 30px;">
+          
+          Price Change for Subscription Level
+      
+      </h2>
+      <p style="padding-right: 150px; padding-left: 150px;"> Taking a look at countries with the top 15 library sizes, lets see how 
+        the level of subscription price varies. The pricing is quite similar for a basic subscription with the cheapest belong to 
+        the <b>Philippines</b> at <b>$7.35</b> and the most expensive being <b>Singapore</b> at <b>$9.51</b>. There is a clear best and worst country from the graphic
+        for the standard and premium prices. <b>Gibraltar</b> costs <b>$14.67</b> and <b>$20.32</b> for a standard and premium subscription respectively, whereas
+        the <b>Philippines</b> cost <b>$9.14</b> and <b>$10.93</b>.<br><br> Thus, it is clear that the <b>Phillipines</b> have the best Netflix deal accross all categories with
+        large libraries and reasonable and affordable prices for all forms of subscription. </p>
+      </div>
+    </div>
+    <div class="pure-u-1-2">
+      <br><br><br><br><br>
+      <div id="line_chart" style="padding-right: 100px; padding-left: 100px;"></div>
+    </div>
+  </div>
+  <!-- end pure grid group -->
+
+  <br><br><br>
+
+
+    <div class="pure-g">
+      <div class="pure-u-1-1 small-font">
+        <p style="padding-right: 150px; padding-left: 150px;">This visualisation is created by <a href="https://github.com/jdun0016/3179DV" target="_blank">Joshua Duncan</a>.
+             The datasource is <a href="https://www.kaggle.com/datasets/prasertk/netflix-subscription-price-in-different-countries?select=netflix+price+in+different+countries.csv" target=" _blank">from kaggle</href>.</p>
+      </div>
+    </div>
+
+
+  </div> <!-- end page -->
